@@ -30,10 +30,6 @@ func startServer(mux *http.ServeMux) {
 		Addr:    ":8080",
 		Handler: mux,
 	}
-	// Ensure the server is up and running
-	// before calling ListenAndServe
-	if server == nil {
-		log.Fatal("Server is nil")
-	}
+
 	server.ListenAndServe()
 }	
